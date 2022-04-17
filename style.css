@@ -2,3 +2,44 @@ h1 {
   text-align: center;
   color: blue;
 }
+
+body {
+  font-family: sans-serif;
+}
+h1 {
+  color: orange;
+  font-size: 22px;
+  text-align: center;
+  margin: auto 0;
+}
+ul {
+  text-align: left;
+}
+li {
+  list-style: none;
+}
+.weather-app {
+  border: 1px solid;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 15px;
+}
+.col-3 {
+  margin: 20px;
+}
+.col-sm-6 {
+  text-align: center;
+}
+.col-sm-3 {
+  text-align: center;
+}
+.main-weather-icon {
+  font-size: 60px;
+}
+.weather-icon {
+  font-size: 30px;
+}
+.high-and-low {
+  font-size: 13px;
+}
