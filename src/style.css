@@ -43,3 +43,12 @@ li {
 .high-and-low {
   font-size: 13px;
 }
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+}

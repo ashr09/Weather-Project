@@ -30,7 +30,10 @@
                           <input type="search" 
                           id="city-input"
                           class="form-control" 
-                          placeholder="Search a city..."/>
+                          placeholder="Search a city..."
+                          autocomplete="off"
+                          
+                          />
                         </div>
                     <div class="col-sm-3">
                         <input
@@ -51,14 +54,21 @@
         </form>
         <div class="row">
            <div class="col-sm-6">
+               <div class="statementCurrentTemp">
              Currently <span class="temperature" id="temperature">62</span>
-             <span class="units"> °F | <a href="#" 
-              id="celsius-link">°C</a> in</span>
+             <span class="units"> <a href="#" id="fahrenheit-link" class="active">°F</a> | 
+              <a href="#" id="celsius-link">°C</a> in</span>
               <h1 id="city"></h1>
              <div><img src="http://openweathermap.org/img/wn/01d@2x.png"
              alt="clear"
              id="icon"/> 
             </div>
+           
+            
+
+
+            
+            </div> 
                 </div>
                 
                 <div class="col-sm-6">
