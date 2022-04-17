@@ -9,7 +9,96 @@
   </head>
   <body>
     <h1>Hello</h1>
+ <div class="container">
+      <div class="weather-app">
+        <br/>
+          <form class="search-form" id ="search-form">
+            <div class="row">
+                  <div class="row">
+                      <div class="col-sm-6">
+                          <input type="search" 
+                          id="city-input"
+                          class="form-control" 
+                          placeholder="Search a city..."/>
+                        </div>
+                    <div class="col-sm-3">
+                        <input
+                        type="submit"
+                        value="Search"
+                        class="form-control btn btn-outline-primary"/>
+                    </div>
+                    <div class="col-sm-3">
+                        <input
+                        id="current-location-button"
+                        type="submit"
+                        value="Current"
+                        class="form-control btn btn-outline-dark"/>
+                    </div>
+                  </div>
+                </div>
+                <br/>
+        </form>
+        <div class="row">
+           <div class="col-sm-6">
+             Currently <span class="temperature" id="temperature">62</span>
+             <span class="units"> °F | <a href="#" 
+              id="celsius-link">°C</a> in</span>
+              <h1 id="city"></h1>
+             <div class="main-weather-icon">🌤 </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <ul>
+                        <li id="condition">Partly cloudy</li>  
+                      <li id="current-date"></li>
+                        <li>Feels like <span id="feelsLike"></span>°F</li>
+                        <li>Humidity <span id="humidity"></span>%</li>
+                      </ul>
+                </div>
+              <hr>
+              </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      Tomorrow
+                    </br>
+                    <div class="weather-icon">
+                        🌧</div>
+                       <div class="high-and-low"> H 68°F / L 60°F</div>
+                    </div>
+                    <div class="col-sm-3">
+                      Wednesday
+                    </br>
+                    <div class="weather-icon">
+                    🌧</div>
+                    <div class="high-and-low">H 69°F / L 42°F</div>
+                  
+                    </div>
+                    <div class="col-sm-3">
+                      Thursday
+                    </br>
+                    <div class="weather-icon">
+                        🌧</div>
+                  
+                  <div class="high-and-low">H 44°F / L 41°F</div>
+                    </div>
+                    <div class="col-sm-3">
+                        Friday
+                    </br>
+                    <div class="weather-icon">
+                        ☁️</div>
+                  
+                  <div class="high-and-low">H 68°F / L 30°F</div>
+                      </div>
 
+
+                     
+                        </div>
+
+
+
+                  </div>
+                </div>
+    <div id="app"></div>
     <script src="script.js"></script>
   </body>
 </html>
