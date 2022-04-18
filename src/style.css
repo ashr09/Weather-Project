@@ -52,3 +52,19 @@ li {
 .active:hover {
   text-decoration: none;
 }
+
+.forecast {
+  margin-top: 20px
+  text-align: center;
+
+}
+
+.forecast-date {
+  font-size: 16px;
+  color: blue;
+}
+
+.high-and-low {
+  font size: 13px;
+  color: red;
+}
