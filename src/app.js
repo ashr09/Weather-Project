@@ -24,6 +24,33 @@ function updatedTimeAndDate(timeAndDate) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-sm-3">
+    <div class="forecast-date">${day}</div>
+    <img
+      src="http://openweathermap.org/img/wn/01d@2x.png"
+      alt="clear"
+      id="icon"
+      width="45"
+    />
+    <div class="high-and-low">
+      <span class="high"> H 68°F </span>
+      <span class="low">/ L 60°F</span>
+    </div>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
@@ -108,3 +135,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Seoul");
+displayForecast();
