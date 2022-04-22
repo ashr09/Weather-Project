@@ -27,20 +27,30 @@ function updatedTimeAndDate(timeAndDate) {
 function specifyDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-  return day;
+  return days[day];
 }
-
+///you are at minute 8 of API integration VIDEO
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
 
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-sm-3">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4)
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-sm-3">
     <div class="forecast-date">${specifyDay(forecastDay.dt)}</div>
     <img
       src="http://openweathermap.org/img/wn/${
@@ -51,8 +61,8 @@ function displayForecast(response) {
       width="45"
     />
     <div class="high-and-low">
-      <span class="high"> H ${forecastDay.temp.max}°F </span>
-      <span class="low">/ L ${forecastDay.temp.min}°F</span>
+      <span class="high"> H ${Math.round(forecastDay.temp.max)}°F </span>
+      <span class="low">/ L ${Math.round(forecastDay.temp.min)}°F</span>
     </div>
   </div>`;
   });
