@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Project</title>
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <link
@@ -15,14 +14,13 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="src/style.css" />
+<link rel="stylesheet" href="src/style.css" />
   </head>
+  
   <body>
-    
  <div class="container">
       <div class="weather-app">
         <br/>
-    
           <form class="search-form" id ="search-form">
             <div class="row">
                   <div class="row">
@@ -30,23 +28,22 @@
                           <input type="search" 
                           id="city-input"
                           class="form-control" 
-                          placeholder="Search a city..."
+                          placeholder="search a city..."
                           autocomplete="off"
-                          
                           />
                         </div>
                     <div class="col-sm-3">
                         <input
                         type="submit"
-                        value="Search"
-                        class="form-control btn btn-outline-primary"/>
+                        value="search"
+                        class="form-control btn btn-outline-secondary"/>
                     </div>
                     <div class="col-sm-3">
                         <input
                         id="current-location-button"
                         type="submit"
-                        value="Current"
-                        class="form-control btn btn-outline-dark"/>
+                        value="current"
+                        class="form-control btn btn-outline-secondary"/>
                     </div>
                   </div>
                 </div>
@@ -55,39 +52,36 @@
         <div class="row">
            <div class="col-sm-6">
                <div class="statementCurrentTemp">
-             Currently <span class="temperature" id="temperature">62</span>
-             <span class="units"> <a href="#" id="fahrenheit-link" class="active">°F</a> | 
-              <a href="#" id="celsius-link">°C</a> in</span>
-              <h1 id="city"></h1>
+             current weather in
+              </br><h1 id="city"></h1> 
              <div><img src="http://openweathermap.org/img/wn/01d@2x.png"
              alt="clear"
              id="icon"/> 
             </div>
             </div> 
                 </div>
-                
                 <div class="col-sm-6">
-                    <ul>
-                        <li id="condition">Partly cloudy</li>  
-                      <li id="current-date"></li>
-                        <li>Feels like <span id="feelsLike"></span>°F</li>
-                        <li>Humidity <span id="humidity"></span>%</li>
+                    <ul>  
+              <li id="condition">partly cloudy</li>   
+              <span class="temperature" id="temperature">62</span>
+             <span class="units"> <a href="#" id="fahrenheit-link" class="active">°F</a> | 
+              <a href="#" id="celsius-link">°C</a></span>     
+              <li>feels like <span id="feelsLike"></span>°f</li>
+              <li id="current-date"></li>  
+              <li>humidity <span id="humidity"></span>%</li>
+              <li>wind speed <span id="windSpeed"></span> mph<km>
+              <h></h></li>
                       </ul>
                 </div>
               <hr>
               </div>
               <div class="forecast" id="forecast">
-                  
                         </div>
-
-
-
                   </div>
                 </div>
                 </div>
     <div id="app"></div>
-    
-    <p><small><a href="https://github.com/ashr09/Weather-Project" target="_blank">Open-source code</a> by Ashley Riedell</small></p>
+    <p><small><a href="https://github.com/ashr09/Weather-Project" target="_blank" id="link">open-source code</a> by <a href="https://www.linkedin.com/in/ashleyriedell/" target="blank">ashley riedell</a> and hosted on <a href="https://www.netlify.com/" target="blank">netlify</a></small></p>
     <script src="src/app.js"></script>
   </body>
 </html>

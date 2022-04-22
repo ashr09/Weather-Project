@@ -39,7 +39,7 @@ function specifyDay(timestamp) {
 
   return days[day];
 }
-///you are at minute 8 of API integration VIDEO
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
@@ -61,8 +61,8 @@ function displayForecast(response) {
       width="45"
     />
     <div class="high-and-low">
-      <span class="high"> H ${Math.round(forecastDay.temp.max)}°F </span>
-      <span class="low">/ L ${Math.round(forecastDay.temp.min)}°F</span>
+      <span class="high">${Math.round(forecastDay.temp.max)}°F |</span>
+      <span class="low">${Math.round(forecastDay.temp.min)}°F</span>
     </div>
   </div>`;
   });
@@ -80,12 +80,16 @@ function getForecast(coordinates) {
 }
 
 function displayWeather(response) {
+  console.log(response.data.wind.speed);
   let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#windSpeed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#condition").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#feelsLike").innerHTML = Math.round(
@@ -127,8 +131,8 @@ function getCurrentLocation(event) {
 }
 
 function convertToCelsius(event) {
-  event.preventDefault(); //good
-  let temperatureElement = document.querySelector("#temperature"); //good
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
@@ -137,24 +141,21 @@ function convertToCelsius(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature"); //good
+  let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-//feature 1
 let dateElement = document.querySelector("#current-date");
 let now = new Date();
 dateElement.innerHTML = updatedTimeAndDate(now);
 
 let fahrenheitTemperature = null;
 
-//global
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-//global
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
@@ -164,4 +165,4 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Seoul");
+searchCity("seoul");

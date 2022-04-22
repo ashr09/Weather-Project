@@ -1,52 +1,99 @@
 body {
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: lowercase;
+  background: radial-gradient(rgb(237, 207, 169) 0%, rgb(213, 113, 73) 100%);
+  color: #bb2253;
+  cursor: default;
+}
+
+a {
+  color: #bb2253;
+}
+
+a:hover {
+  color: #48484a;
 }
 
 p {
   text-align: center;
+  color: #48484a;
+  text-decoration: none;
 }
 
 h1 {
   color: purple;
-  font-size: 22px;
+  font-size: 30px;
   text-align: center;
   margin: auto 0;
+  font-weight: bolder;
 }
+
 ul {
   text-align: left;
 }
+
 li {
   list-style: none;
 }
+
 .weather-app {
   border: 1px solid;
-  padding: 20px;
-  margin: 200px auto;
-  max-width: 500px;
-  border-radius: 15px;
+  border-color: #D57149;
+  border-width: 15px;
+  border-style: double;
+  padding: 8px 10px 20px 10px;
+  margin: 100px auto;
+  max-width: 550px;
+  border-radius: 25px;
 }
-.col-3 {
-  margin: 20px;
-}
+
 .col-sm-6 {
   text-align: center;
 }
+
 .col-sm-3 {
   text-align: center;
 }
+
+.form-control {
+  border-color: purple;
+  color: #48484a;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.btn-outline-secondary {
+    color: purple;
+    background-color: none;
+    border-color: purple;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-outline-secondary:hover {
+  background-color: purple;
+  color: f2f2f1;
+  border-color: purple;
+}
+
 .main-weather-icon {
   font-size: 60px;
 }
+
 .weather-icon {
   font-size: 30px;
 }
+
 .high-and-low {
   font-size: 13px;
+  color: #48484a;
 }
+
 .active {
-  color: black;
+  color: #bb2253;
   cursor: default;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .active:hover {
@@ -55,16 +102,20 @@ li {
 
 .forecast {
   margin-top: 20px
-  text-align: center;
-
+  text-align: center
 }
 
 .forecast-date {
   font-size: 16px;
-  color: blue;
+  color: #48484a;
 }
 
-.high-and-low {
-  font size: 13px;
-  color: red;
+.row {
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::selection {
+  color: white;
 }
