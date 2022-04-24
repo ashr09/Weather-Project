@@ -8,6 +8,7 @@ body {
 
 a {
   color: #bb2253;
+   text-decoration: none;
 }
 
 a:hover {
@@ -93,11 +94,12 @@ li {
   color: #bb2253;
   cursor: default;
   text-decoration: none;
-  font-weight: bold;
+  
 }
 
 .active:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 .forecast {
